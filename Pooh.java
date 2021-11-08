@@ -38,5 +38,12 @@ public class Pooh extends Character implements Move, Conversation{
     @Override
     public int hashCode() { 
         return Objects.hash(this.toString()); 
-    } 
+    }
+    @Override 
+    public boolean equals(Object o) { 
+        if (this == o) return true; 
+        if (!(o instanceof Character)) return false; 
+        Character that = (Character) o; 
+        return Objects.equals(Place, that.Place); 
+    }
 }
