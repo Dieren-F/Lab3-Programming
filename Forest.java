@@ -16,4 +16,9 @@ public class Forest implements Move{
         System.out.println(WaterLine);
         Day++;
     }
+    @Override 
+    public String toString() { 
+        return "Сегодня " + Day + 
+        " день. Уровень воды в лесу - " + WaterLine + "."; 
+    }
 }

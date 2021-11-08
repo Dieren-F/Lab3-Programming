@@ -14,7 +14,12 @@ public class Rain implements Move{
             RainPower--;
             if (RainPower == 0) {RainPower++;}
         }
-        if (RainPower>7) {System.out.println("Ливень льет и льет");}
-        else {System.out.println("Дождь льет и льет");}
+        System.out.println(this);
+    }
+    @Override 
+    public String toString() { 
+        String str = "Дождь льет и льет";
+        if (RainPower>7) {str = "Ливень льет и льет";}
+        return str;
     }
 }

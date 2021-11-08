@@ -25,4 +25,13 @@ public class SwimingBear extends Character implements Conversation, Swim{
     public void Makeaboat() {
         State = SWIMMINGBEARSTATE.TURNINTOBOAT;
     }
+    @Override 
+    public String toString() { 
+        String str = "Пока это горшок для мёда";
+        if (State == SWIMMINGBEARSTATE.TURNINTOBOAT){
+            str = "Теперь это Плавучий Медведь";
+        }
+        return str + ". Уровень воды - " + Height + 
+        ". Место расположения - " + Place + "."; 
+    }
 }

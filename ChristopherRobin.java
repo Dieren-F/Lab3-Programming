@@ -12,4 +12,13 @@ public class ChristopherRobin extends Character implements Move, RobinAction{
         if (WaterLevel>10) {this.State = ROBINSTATE.THINKING;}
         else {this.State = ROBINSTATE.LOOKING;}
     }
+    @Override 
+    public String toString() { 
+        String str = "Робин думает о разных вещах";
+        if (State == ROBINSTATE.LOOKING){
+            str = "Робин весело смотрит вниз и любуется всей этой водой";
+        }
+        return str + ". Уровень воды - " + Height + 
+        ". Место расположения - " + Place + "."; 
+    }
 }

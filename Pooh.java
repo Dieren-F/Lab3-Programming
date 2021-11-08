@@ -25,4 +25,13 @@ public class Pooh extends Character implements Move, Conversation{
         State = POOHSTATE.SWIMONBOAT;
         System.out.println("Пух плывет на Плавучем Медведе");
     }
+    @Override 
+    public String toString() { 
+        String str = "Пух сидит на дереве и ест мёд";
+        if (State == POOHSTATE.SWIMONBOAT){
+            str = "Пух плывет на Плавучем Медведе";
+        }
+        return str + ". Уровень воды - " + Height + 
+        ". Место расположения - " + Place + "."; 
+    }
 }
