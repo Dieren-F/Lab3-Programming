@@ -1,3 +1,4 @@
+import java.util.Objects; 
 public class Rain implements Move{
     private Integer RainPower;
     public Rain() {
@@ -22,4 +23,8 @@ public class Rain implements Move{
         if (RainPower>7) {str = "Ливень льет и льет";}
         return str;
     }
+    @Override
+    public int hashCode() { 
+        return Objects.hash(this.toString()); 
+    } 
 }

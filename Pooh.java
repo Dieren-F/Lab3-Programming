@@ -1,3 +1,4 @@
+import java.util.Objects; 
 public class Pooh extends Character implements Move, Conversation{
     public POOHSTATE State;
     public Pooh(String name, Integer LivingHeight, Integer LivingPlace, POOHSTATE State){
@@ -34,4 +35,8 @@ public class Pooh extends Character implements Move, Conversation{
         return str + ". Уровень воды - " + Height + 
         ". Место расположения - " + Place + "."; 
     }
+    @Override
+    public int hashCode() { 
+        return Objects.hash(this.toString()); 
+    } 
 }

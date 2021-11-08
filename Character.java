@@ -1,5 +1,4 @@
 import java.util.Objects;
-
 abstract class Character {
     protected String CharacterName;
     protected Integer Height;

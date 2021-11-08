@@ -23,6 +23,6 @@ public class Main {
             }
         }
         System.out.println("Пух приплыл к Робину");
-        System.out.println(f);
+        System.out.println(r.hashCode());
     }
 }

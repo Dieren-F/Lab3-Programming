@@ -1,3 +1,4 @@
+import java.util.Objects; 
 public class SwimingBear extends Character implements Conversation, Swim{
     private SWIMMINGBEARSTATE State;
     public SwimingBear(String name, Integer LivingHeight, Integer LivingPlace, SWIMMINGBEARSTATE State) {
@@ -34,4 +35,8 @@ public class SwimingBear extends Character implements Conversation, Swim{
         return str + ". Уровень воды - " + Height + 
         ". Место расположения - " + Place + "."; 
     }
+    @Override
+    public int hashCode() { 
+        return Objects.hash(this.toString()); 
+    } 
 }

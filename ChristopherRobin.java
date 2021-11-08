@@ -1,3 +1,4 @@
+import java.util.Objects; 
 public class ChristopherRobin extends Character implements Move, RobinAction{
     protected ROBINSTATE State;
     public ChristopherRobin(String name, Integer LivingHeight, Integer LivingPlace, ROBINSTATE State){
@@ -20,5 +21,9 @@ public class ChristopherRobin extends Character implements Move, RobinAction{
         }
         return str + ". Уровень воды - " + Height + 
         ". Место расположения - " + Place + "."; 
+    }
+    @Override
+    public int hashCode() { 
+        return Objects.hash(this.toString()); 
     }
 }

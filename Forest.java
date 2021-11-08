@@ -1,3 +1,4 @@
+import java.util.Objects; 
 public class Forest implements Move{
     private Integer WaterLine;
     private Integer Day;
@@ -21,4 +22,8 @@ public class Forest implements Move{
         return "Сегодня " + Day + 
         " день. Уровень воды в лесу - " + WaterLine + "."; 
     }
+    @Override
+    public int hashCode() { 
+        return Objects.hash(this.toString()); 
+    } 
 }
